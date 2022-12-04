@@ -6,12 +6,12 @@ pub trait RunnerTrait {
 
 pub struct Runner<InputT> {
     pub parser: Box<dyn Fn(&String) -> InputT>,
-    pub solver: Box<dyn Fn(&InputT) -> String>,
+    pub solver: Box<dyn Fn(InputT) -> String>,
 }
 
 impl<InputT> RunnerTrait for Runner<InputT> {
     fn run(&self, input: &String) -> String {
-        return (&self.solver)(&(self.parser)(input));
+        return (&self.solver)((self.parser)(input));
     }
 }
 

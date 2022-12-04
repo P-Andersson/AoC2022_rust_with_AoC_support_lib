@@ -23,7 +23,7 @@ pub fn parser(raw_input: &String) -> Vec<Elf> {
     return elves;
 }
 
-pub fn solverP1(input: &Vec<Elf>) -> String {
+pub fn solverP1(input: Vec<Elf>) -> String {
     let mut highest: i32 = 0;
     for elf in input {
         let cur = elf.total_calories();
@@ -35,7 +35,7 @@ pub fn solverP1(input: &Vec<Elf>) -> String {
     return highest.to_string();
 }
 
-pub fn solverP2(input: &Vec<Elf>) -> String {
+pub fn solverP2(input: Vec<Elf>) -> String {
     let mut calories_total: Vec<i32> = input.into_iter().map(|elf| elf.total_calories()).collect();
     calories_total.sort();
 

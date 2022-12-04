@@ -124,7 +124,7 @@ pub fn parserP2(raw_input: &String) -> StrategyGuide {
     return StrategyGuide{rounds: rounds};
 }
 
-pub fn solver(input: &StrategyGuide) -> String {
+pub fn solver(input: StrategyGuide) -> String {
     let mut score: i32 = 0;
     for round in &input.rounds {
         let (opponent, own) = round;

@@ -3,6 +3,7 @@ use raoc::problem as problem;
 
 mod day1;
 mod day2;
+mod day3;
 
 fn main() {
     let suit = raoc::suit::Suit{problems: vec![
@@ -26,6 +27,17 @@ fn main() {
             main_input: "problems/day2/input",
             runner: Box::new(problem::Runner{parser:  Box::new(day2::parserP2), solver:  Box::new(day2::solver)}),
         },
+        problem::Problem{name: "day3_p1",
+            sample_inputs: vec![problem::Example{sample_input: "problems/day3/sample_input", expected: "157"}],
+            main_input: "problems/day3/input",
+            runner: Box::new(problem::Runner{parser:  Box::new(day3::parser), solver:  Box::new(day3::solverP1)}),
+        },
+        problem::Problem{name: "day3_p2",
+            sample_inputs: vec![problem::Example{sample_input: "problems/day3/sample_input", expected: "70"}],
+            main_input: "problems/day3/input",
+            runner: Box::new(problem::Runner{parser:  Box::new(day3::parser), solver:  Box::new(day3::solverP2)}),
+        },
+
     ]};
 
     suit.run();
