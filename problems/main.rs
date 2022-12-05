@@ -4,6 +4,7 @@ use raoc::problem as problem;
 mod day1;
 mod day2;
 mod day3;
+mod day4;
 
 fn main() {
     let suit = raoc::suit::Suit{problems: vec![
@@ -36,6 +37,16 @@ fn main() {
             sample_inputs: vec![problem::Example{sample_input: "problems/day3/sample_input", expected: "70"}],
             main_input: "problems/day3/input",
             runner: Box::new(problem::Runner{parser:  Box::new(day3::parser), solver:  Box::new(day3::solverP2)}),
+        },
+        problem::Problem{name: "day4_p1",
+            sample_inputs: vec![problem::Example{sample_input: "problems/day4/sample_input", expected: "2"}],
+            main_input: "problems/day4/input",
+            runner: Box::new(problem::Runner{parser:  Box::new(day4::parser), solver:  Box::new(day4::solverP1)}),
+        },
+        problem::Problem{name: "day4_p2",
+            sample_inputs: vec![problem::Example{sample_input: "problems/day4/sample_input", expected: "4"}],
+            main_input: "problems/day4/input",
+            runner: Box::new(problem::Runner{parser:  Box::new(day4::parser), solver:  Box::new(day4::solverP2)}),
         },
 
     ]};
