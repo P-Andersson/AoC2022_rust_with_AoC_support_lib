@@ -6,6 +6,7 @@ mod day2;
 mod day3;
 mod day4;
 mod day5;
+mod day6;
 
 fn main() {
     let suit = raoc::suit::Suit{problems: vec![
@@ -58,6 +59,24 @@ fn main() {
             sample_inputs: vec![problem::Example{sample_input: "problems/day5/sample_input", expected: "MCD"}],
             main_input: "problems/day5/input",
             runner: Box::new(problem::Runner{parser:  Box::new(day5::parser), solver:  Box::new(day5::solverP2)}),
+        },
+        problem::Problem{name: "day6_p1",
+            sample_inputs: vec![problem::Example{sample_input: "problems/day6/sample1", expected: "7"},
+                                problem::Example{sample_input: "problems/day6/sample2", expected: "5"},
+                                problem::Example{sample_input: "problems/day6/sample3", expected: "6"},
+                                problem::Example{sample_input: "problems/day6/sample4", expected: "10"},
+                                problem::Example{sample_input: "problems/day6/sample5", expected: "11"}],
+            main_input: "problems/day6/input",
+            runner: Box::new(problem::Runner{parser:  Box::new(day6::parser), solver:  Box::new(day6::solverP1)}),
+        },
+        problem::Problem{name: "day6_p2",
+            sample_inputs: vec![problem::Example{sample_input: "problems/day6/sample1", expected: "19"},
+                                problem::Example{sample_input: "problems/day6/sample2", expected: "23"},
+                                problem::Example{sample_input: "problems/day6/sample3", expected: "23"},
+                                problem::Example{sample_input: "problems/day6/sample4", expected: "29"},
+                                problem::Example{sample_input: "problems/day6/sample5", expected: "26"}],
+            main_input: "problems/day6/input",
+            runner: Box::new(problem::Runner{parser:  Box::new(day6::parser), solver:  Box::new(day6::solverP2)}),
         },
 
     ]};
