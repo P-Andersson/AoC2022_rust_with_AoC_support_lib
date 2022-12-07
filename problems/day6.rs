@@ -6,8 +6,7 @@ pub fn parser(raw_input: &String) -> String {
 
 pub fn solverP1(input: String) -> String {
     let data = input.as_bytes();
-    for end_cursor in 3..data.len() {
-        let end_index = end_cursor + 1;
+    for end_index in 4..data.len()+1 {
         let mut found: HashSet<u8>  = HashSet::new();
         for i in end_index-4..end_index {
             found.insert(data[i]);
@@ -22,8 +21,7 @@ pub fn solverP1(input: String) -> String {
 
 pub fn solverP2(input: String) -> String {
     let data = input.as_bytes();
-    for end_cursor in 13..data.len() {
-        let end_index = end_cursor + 1;
+    for end_index in 14..data.len()+1 {
         let mut found: HashSet<u8>  = HashSet::new();
         for i in end_index-14..end_index {
             found.insert(data[i]);
